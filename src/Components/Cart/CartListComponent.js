@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import CartItemComponent from './CartItemComponent';
-import CartContext from '../../GlobalElements/CartContext';
+import { CartContext } from '../../GlobalElements/CartContext';
 import CartBar from './CartBar';
 
 const CartComponent = () => {
 
-    const [cart,setCart] = useContext(CartContext);
+    const {cart} = useContext(CartContext);
     const [items,setItems]=useState([]);
 
     useEffect(() => {

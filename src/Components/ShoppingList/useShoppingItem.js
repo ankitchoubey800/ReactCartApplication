@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import CartContext from '../../GlobalElements/CartContext'
+import {CartContext} from '../../GlobalElements/CartContext'
 
 const useShoppingItem = () => {
 
-    const [cart,setCart] = useContext(CartContext);
+    const { cart,setCart } = useContext(CartContext);
     // { items: [], totalPrice: 0, totalDisplayPrice: 0, totalDiscount: 0 }
 
     const AddToCart=(item)=>{

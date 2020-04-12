@@ -2,12 +2,12 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import CartContext from '../../../GlobalElements/CartContext';
+import {CartContext} from '../../../GlobalElements/CartContext';
 
 const Search = (props) => {
 
     const [searchWord,setSearchWord]=useState('');
-    const [cart,setCart,searchKeyword, setSearchKeyword] = useContext(CartContext);
+    const { setSearchKeyword } = useContext(CartContext);
 
     const handleChange=(event)=>{
         let word=event.target.value;

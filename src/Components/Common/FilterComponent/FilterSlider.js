@@ -1,20 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRupeeSign } from '@fortawesome/free-solid-svg-icons'
+import InputRange from 'react-input-range';
+import "react-input-range/lib/css/index.css";
+import {CartContext} from '../../../GlobalElements/CartContext';
 
 const FilterSlider = () => {
 
+    const { filterValue,setFilterValue } = useContext(CartContext);
+
+    let rupeeSign = (value) => { return (<><FontAwesomeIcon icon={faRupeeSign} size="sm" /> {value}</>) };
     return (
-        <div className="col-12 my-4" style={{textAlign:'center'}}>
-                <div className="d-flex flex-row justify-content-between">
-                    <div ><FontAwesomeIcon icon={faRupeeSign} size="sm" />100</div>
-                    <div ><FontAwesomeIcon icon={faRupeeSign} size="sm" />10000</div>
-                </div>
-                <input type="range" className="custom-range" id="customRange"></input>
-                <div>Price</div>
-                <button className="btn btn-md mt-4" href="#"
-                    style={{ borderRadius: '15px', border: 'none', backgroundColor: '#3c85e7', color: 'white', width: '100px' }}>
-                    <b>Apply</b></button>
+        <div className="col-10 my-4 mx-auto" style={{ textAlign: 'center' }}>
+
+            <InputRange
+                draggableTrack
+                maxValue={10000}
+                minValue={100}
+                onChange={value => setFilterValue(value)}
+                onChangeComplete={value => console.log(value)}
+                value={filterValue}
+                formatLabel={value => rupeeSign(value)} />
+
+            <div className="mt-3"><b>Price</b></div>
         </div>
     );
 };
