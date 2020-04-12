@@ -9,13 +9,13 @@ const useShoppingList = () => {
         GetShoppingItems().then(result => {
             // setItems(result.items);
             setItems([{ "name": "item 1", "price": { "actual": 1000, "display": 1900 }, "discount": 10 },
-            { "name": "item 2", "price": { "actual": 300, "display": 900 }, "discount": 30 },
-            { "name": "item 3", "price": { "actual": 200, "display": 900 }, "discount": 50 },
-            { "name": "item 4", "price": { "actual": 500, "display": 900 }, "discount": 40 },
-            { "name": "item 5", "price": { "actual": 150, "display": 900 }, "discount": 20 },
-            { "name": "item 6", "price": { "actual": 450, "display": 900 }, "discount": 60 },
-            { "name": "item 7", "price": { "actual": 230, "display": 900 }, "discount": 35 },
-            { "name": "item 8", "price": { "actual": 700, "display": 900 }, "discount": 45 }]);
+            { "name": "item 2", "price": { "actual": 3000, "display": 3900 }, "discount": 30 },
+            { "name": "item 3", "price": { "actual": 2000, "display": 2900 }, "discount": 50 },
+            { "name": "item 4", "price": { "actual": 5000, "display": 5900 }, "discount": 40 },
+            { "name": "item 5", "price": { "actual": 1500, "display": 2900 }, "discount": 20 },
+            { "name": "item 6", "price": { "actual": 4500, "display": 6900 }, "discount": 60 },
+            { "name": "item 7", "price": { "actual": 2300, "display": 3900 }, "discount": 35 },
+            { "name": "item 8", "price": { "actual": 7000, "display": 9900 }, "discount": 45 }]);
         });
     }, []);
 
@@ -37,13 +37,13 @@ const useShoppingList = () => {
                 GetShoppingItems().then(result => {
                     // setItems(result.items);
                     setItems([{ "name": "item 1", "price": { "actual": 1000, "display": 1900 }, "discount": 10 },
-                    { "name": "item 2", "price": { "actual": 300, "display": 900 }, "discount": 30 },
-                    { "name": "item 3", "price": { "actual": 200, "display": 900 }, "discount": 50 },
-                    { "name": "item 4", "price": { "actual": 500, "display": 900 }, "discount": 40 },
-                    { "name": "item 5", "price": { "actual": 150, "display": 900 }, "discount": 20 },
-                    { "name": "item 6", "price": { "actual": 450, "display": 900 }, "discount": 60 },
-                    { "name": "item 7", "price": { "actual": 230, "display": 900 }, "discount": 35 },
-                    { "name": "item 8", "price": { "actual": 700, "display": 900 }, "discount": 45 }]);
+                    { "name": "item 2", "price": { "actual": 3000, "display": 3900 }, "discount": 30 },
+                    { "name": "item 3", "price": { "actual": 2000, "display": 2900 }, "discount": 50 },
+                    { "name": "item 4", "price": { "actual": 5000, "display": 5900 }, "discount": 40 },
+                    { "name": "item 5", "price": { "actual": 1500, "display": 2900 }, "discount": 20 },
+                    { "name": "item 6", "price": { "actual": 4500, "display": 6900 }, "discount": 60 },
+                    { "name": "item 7", "price": { "actual": 2300, "display": 3900 }, "discount": 35 },
+                    { "name": "item 8", "price": { "actual": 7000, "display": 9900 }, "discount": 45 }]);
                 });
             }
         }
