@@ -10,6 +10,7 @@ import './App.css';
 function App() {
 
   const [cart, setCart] = useState({ items: [], totalPrice: 0, totalDisplayPrice: 0, totalDiscount: 0 });
+  const [searchKeyword, setSearchKeyword]=useState('');
 
   let routes = (
     <Switch>
@@ -19,7 +20,7 @@ function App() {
     </Switch>
   );
   return (
-    <CartContext.Provider value={[cart, setCart]}>
+    <CartContext.Provider value={[cart, setCart, searchKeyword, setSearchKeyword]}>
       <Router>
         <div className="container-fluid p-0">          
           <Header cartCount={cart.items.length}/>

@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useContext } from 'react';
 import useShoppingList from './useShoppingList';
 import ShoppingItem from './ShoppingItem';
 import SortBar from '../Common/SortComponent/SortBar';
 import FilterBar from '../../Components/Common/FilterComponent/FilterBar';
 import FilterBarModal from '../../Components/Common/FilterComponent/FilterBarModal';
 import SortBarModal from '../Common/SortComponent/SortBarModal';
+import CartContext from '../../GlobalElements/CartContext';
 
 const ShoppingList = () => {
 
-    const { items, setSorting, toggleSort } = useShoppingList();
+    const { items, setSorting } = useShoppingList();
+    const [cart,setCart,searchKeyword, setSearchKeyword] = useContext(CartContext);
 
     return (
         <>
@@ -27,7 +29,7 @@ const ShoppingList = () => {
                 <div className="row mt-4">
                     {
                         items ?
-                            items.map((item) => {
+                            items.filter(x=>x.name.includes(searchKeyword)).map((item) => {
                                 return <ShoppingItem item={item} key={item.name} />
                             })
                             : ''

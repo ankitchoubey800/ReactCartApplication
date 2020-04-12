@@ -81,22 +81,10 @@ const useShoppingList = () => {
             }
         }
     }
-    
-    const toggleSort=(component)=>{
-        if(component==='sort')
-        {
 
-        }
-        else if(component==='filter')
-        {
-
-        }
-    }
-    
     return{
         items,
-        setSorting,
-        toggleSort
+        setSorting        
     }
 };
 

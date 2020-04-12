@@ -45,7 +45,7 @@ const SortBarModal = (props) => {
             Sort
             </button>
 
-        <div className="modal fade" id="sortModal" tabindex="-1" role="dialog" aria-labelledby="sortModalLabel" aria-hidden="true">
+        <div className="modal fade" id="sortModal" tabIndex="-1" role="dialog" aria-labelledby="sortModalLabel" aria-hidden="true">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
