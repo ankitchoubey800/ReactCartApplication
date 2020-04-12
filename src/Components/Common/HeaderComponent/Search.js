@@ -10,7 +10,12 @@ const Search = (props) => {
     const [cart,setCart,searchKeyword, setSearchKeyword] = useContext(CartContext);
 
     const handleChange=(event)=>{
-        setSearchWord(event.target.value);
+        let word=event.target.value;
+        setSearchWord(word);
+        if(word==='')
+        {
+            setSearchKeyword(word);
+        }
     }
 
     const search=()=>{
