@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import Header from './Components/Common/HeaderComponent/Header';
+import ShoppingList from './Components/ShoppingList/ShoppingList';
+import CartListComponent from './Components/Cart/CartListComponent';
+import CartContext from './GlobalElements/CartContext';
 import './App.css';
 
 function App() {
+
+  const [cart, setCart] = useState({ items: [], totalPrice: 0, totalDisplayPrice: 0, totalDiscount: 0 });
+
+  let routes = (
+    <Switch>
+      <Route exact path="/" component={ShoppingList} />
+      <Route path="/Cart" component={CartListComponent} />
+      <Redirect to="/" />
+    </Switch>
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartContext.Provider value={[cart, setCart]}>
+      <Router>
+        <div className="container-fluid p-0">          
+          <Header cartCount={cart.items.length}/>
+          {routes}
+          </div >
+      </Router>
+    </CartContext.Provider>
   );
 }
 
