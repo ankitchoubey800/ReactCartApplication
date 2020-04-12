@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/ReactCartApplication/static/css/main.74f83179.chunk.css",
+    "main.js": "/ReactCartApplication/static/js/main.f588c934.chunk.js",
+    "main.js.map": "/ReactCartApplication/static/js/main.f588c934.chunk.js.map",
+    "runtime-main.js": "/ReactCartApplication/static/js/runtime-main.39af722a.js",
+    "runtime-main.js.map": "/ReactCartApplication/static/js/runtime-main.39af722a.js.map",
+    "static/css/2.de424728.chunk.css": "/ReactCartApplication/static/css/2.de424728.chunk.css",
+    "static/js/2.0e267cf9.chunk.js": "/ReactCartApplication/static/js/2.0e267cf9.chunk.js",
+    "static/js/2.0e267cf9.chunk.js.map": "/ReactCartApplication/static/js/2.0e267cf9.chunk.js.map",
+    "index.html": "/ReactCartApplication/index.html",
+    "precache-manifest.4ea45e10c771a502455c3f99c1f4e329.js": "/ReactCartApplication/precache-manifest.4ea45e10c771a502455c3f99c1f4e329.js",
+    "service-worker.js": "/ReactCartApplication/service-worker.js",
+    "static/css/2.de424728.chunk.css.map": "/ReactCartApplication/static/css/2.de424728.chunk.css.map",
+    "static/css/main.74f83179.chunk.css.map": "/ReactCartApplication/static/css/main.74f83179.chunk.css.map",
+    "static/js/2.0e267cf9.chunk.js.LICENSE.txt": "/ReactCartApplication/static/js/2.0e267cf9.chunk.js.LICENSE.txt",
+    "static/media/headphone-1868612_640.jpg": "/ReactCartApplication/static/media/headphone-1868612_640.4da11fed.jpg",
+    "static/media/home-office-336373_640.jpg": "/ReactCartApplication/static/media/home-office-336373_640.a007b2d1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.39af722a.js",
+    "static/css/2.de424728.chunk.css",
+    "static/js/2.0e267cf9.chunk.js",
+    "static/css/main.74f83179.chunk.css",
+    "static/js/main.f588c934.chunk.js"
+  ]
+}
